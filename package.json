@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@hapi/boom": "^10.0.1",
-    "@whiskeysockets/baileys": "^6.7.9",
+    "@whiskeysockets/baileys": "^6.7.12",
     "bee-queue": "^1.7.1",
     "body-parser": "1.20.3",
     "cache-manager": "^6.4.0",
