@@ -1,55 +1,19 @@
-import { Cache, createCache, memoryStore, multiCaching } from 'cache-manager'
-import { redisInsStore } from 'cache-manager-ioredis-yet'
-import { Redis } from 'ioredis'
+import KeyvRedis from '@keyv/redis'
+import { Keyv } from 'keyv'
+import { Cacheable, CacheableMemory } from 'cacheable'
 
-const ttl = 345600000
-const memCache = createCache(
-  memoryStore({
-    ttl,
+const primaryCache = new Keyv({
+  store: new CacheableMemory({
+    ttl: 1000 * 60 * 60 * 24 * 7,
+    lruSize: 5000,
   }),
-)
-const caches: Cache[] = [memCache]
+})
+const secondaryCache = new Keyv({
+  store: new KeyvRedis(),
+})
 
-if (process.env.REDIS_URL) {
-  console.log(`Redis URL: ${process.env.REDIS_URL}`)
-  caches.push(
-    createCache(
-      redisInsStore(
-        new Redis(process.env.REDIS_URL, {
-          reconnectOnError: () => true,
-          maxRetriesPerRequest: null,
-          db: 1,
-        }),
-        {
-          ttl,
-        },
-      ),
-      {
-        ttl,
-      },
-    ),
-  )
-}
-
-if (process.env.REDIS_URL_2) {
-  console.log(`Redis URL 2: ${process.env.REDIS_URL_2}`)
-  caches.push(
-    createCache(
-      redisInsStore(
-        new Redis(process.env.REDIS_URL_2, {
-          reconnectOnError: () => true,
-          maxRetriesPerRequest: null,
-          db: 1,
-        }),
-        {
-          ttl,
-        },
-      ),
-      {
-        ttl,
-      },
-    ),
-  )
-}
-
-export const cache = multiCaching(caches)
+export const cache = new Cacheable({
+  primary: primaryCache,
+  secondary: secondaryCache,
+  ttl: 1000 * 60 * 60 * 24 * 7,
+})
