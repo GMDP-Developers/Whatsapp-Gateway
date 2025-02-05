@@ -19,6 +19,7 @@ import { pino } from 'pino'
 import { cache } from '../cache.js'
 import { bqueue } from '../queue.js'
 import NodeCache from 'node-cache'
+import { randomInt } from 'node:crypto'
 
 const { proto } = wa
 
@@ -220,12 +221,17 @@ class Whatsapp {
             }
 
             bqueue.process(async (job) => {
+              await new Promise(() =>
+                setTimeout(() => {}, 1000 * randomInt(3, 5)),
+              )
               const { jid, message } = job.data
               console.log(`Send Message to ${jid} : ${message}`)
               try {
                 await sock.presenceSubscribe(jid)
                 await sock.sendPresenceUpdate('composing', jid)
-                await new Promise((resolve) => setTimeout(resolve, 75))
+                await new Promise((resolve) =>
+                  setTimeout(resolve, 100 * randomInt(3, 5)),
+                )
                 await sock.sendPresenceUpdate('available', jid)
 
                 const res = await sock.sendMessage(jid, {
