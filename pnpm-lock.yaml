@@ -12,8 +12,8 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1
       '@keyv/redis':
-        specifier: ^4.2.0
-        version: 4.2.0
+        specifier: ^4.3.1
+        version: 4.3.1
       '@whiskeysockets/baileys':
         specifier: ^6.7.15
         version: 6.7.15(eslint@9.21.0)(typescript@5.7.3)
@@ -205,8 +205,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@keyv/redis@4.2.0':
-    resolution: {integrity: sha512-QszmBfZZ3wOKJ5z1hn0CTLf04WN/552ITrSDYC3Yg4jT6yVdlz2fJxi5CNrnZ8NIu/Qaj7OAkbSL+pyFUXp6oA==}
+  '@keyv/redis@4.3.1':
+    resolution: {integrity: sha512-+UJU9eFBOFbvfg/Om8ajCPa5NxtctpQuE2ElE5Wf7xwbghmhlbLsJ2K4ZEmPnUF0YUolFBJFHd/ukDIvyTA5kw==}
     engines: {node: '>= 18'}
 
   '@keyv/serialize@1.0.3':
@@ -2247,7 +2247,7 @@ snapshots:
     dependencies:
       cacheable: 1.8.8
       hookified: 1.7.1
-      keyv: 5.2.3
+      keyv: 5.3.1
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2340,7 +2340,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@keyv/redis@4.2.0':
+  '@keyv/redis@4.3.1':
     dependencies:
       cluster-key-slot: 1.1.2
       keyv: 5.3.1
