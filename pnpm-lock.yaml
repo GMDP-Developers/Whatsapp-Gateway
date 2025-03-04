@@ -15,8 +15,8 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1
       '@whiskeysockets/baileys':
-        specifier: ^6.7.15
-        version: 6.7.15(eslint@9.21.0)(typescript@5.7.3)
+        specifier: ^6.7.16
+        version: 6.7.16(eslint@9.21.0)(typescript@5.7.3)
       bee-queue:
         specifier: ^1.7.1
         version: 1.7.1
@@ -115,8 +115,8 @@ packages:
     resolution: {integrity: sha512-Nms86NXrsaeU9vbBJKni6gXiEXZ4CVpYVzEjDH9Sb8vmZ3UljyA1GSOJl/6LGPO8EHLuSF9H+IxNXHPX8QHJ4g==}
     engines: {node: '>=6.9.0'}
 
-  '@cacheable/node-cache@1.5.2':
-    resolution: {integrity: sha512-ir0oMwvAQGHgEToQYKagEDs7hdsrXfRCq17dLoo2iTrVaGxg80Ogh29+a3ORaHZgPQx37OTOIAoMianhZ4Ykmg==}
+  '@cacheable/node-cache@1.5.3':
+    resolution: {integrity: sha512-xJCYqoxkwg8vpQ/wSv0p4o+j/VEEnP7TUDUsV+VoPVVuwpsUKxU0wyz+VWBbq0SbX6e/oi/jiR/LDQ46miDQ8A==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -505,8 +505,8 @@ packages:
   '@wasm-audio-decoders/ogg-vorbis@0.1.16':
     resolution: {integrity: sha512-HcEx4LPZbbzjhs9bTXgMaXLVCSMSo/egY9paJxAnE9tsYbvseAaGtVddLYktl3Qi/G+nW/ZzUXg4144izJjqCw==}
 
-  '@whiskeysockets/baileys@6.7.15':
-    resolution: {integrity: sha512-0gH2dM/87TNgUajKj9ziLNvfjNKCAjHvzmS7cmoTk7u90YhhGhZ13saXe4+Z/a3jMHimHaCNJjPlzMES9uA9gA==}
+  '@whiskeysockets/baileys@6.7.16':
+    resolution: {integrity: sha512-S999skOvVEBAMqIm5GT+HkQxiX6TjK7iG1Wj9wCUy7vN+hFILOzI8P2SKVuRbhA7W9BLj4S/bWkJRXz/E3z3LA==}
     peerDependencies:
       jimp: ^0.16.1
       link-preview-js: ^3.0.0
@@ -672,6 +672,9 @@ packages:
   cache-manager@5.7.6:
     resolution: {integrity: sha512-wBxnBHjDxF1RXpHCBD6HGvKER003Ts7IIm0CHpggliHzN1RZditb7rXoduE1rplc2DEFYKxhLKgFuchXMJje9w==}
     engines: {node: '>= 18'}
+
+  cacheable@1.8.9:
+    resolution: {integrity: sha512-FicwAUyWnrtnd4QqYAoRlNs44/a1jTL7XDKqm5gJ90wz1DQPlC7U2Rd1Tydpv+E7WAr4sQHuw8Q8M3nZMAyecQ==}
 
   cacheable@1.8.9:
     resolution: {integrity: sha512-FicwAUyWnrtnd4QqYAoRlNs44/a1jTL7XDKqm5gJ90wz1DQPlC7U2Rd1Tydpv+E7WAr4sQHuw8Q8M3nZMAyecQ==}
@@ -2258,7 +2261,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@cacheable/node-cache@1.5.2':
+  '@cacheable/node-cache@1.5.3':
     dependencies:
       cacheable: 1.8.9
       hookified: 1.7.1
@@ -2714,10 +2717,10 @@ snapshots:
       '@wasm-audio-decoders/common': 9.0.5
       codec-parser: 2.5.0
 
-  '@whiskeysockets/baileys@6.7.15(eslint@9.21.0)(typescript@5.7.3)':
+  '@whiskeysockets/baileys@6.7.16(eslint@9.21.0)(typescript@5.7.3)':
     dependencies:
       '@adiwajshing/keyed-db': 0.2.4
-      '@cacheable/node-cache': 1.5.2
+      '@cacheable/node-cache': 1.5.3
       '@hapi/boom': 9.1.4
       '@whiskeysockets/eslint-config': https://codeload.github.com/whiskeysockets/eslint-config/tar.gz/326b55f2842668f4e11f471451c4e39819a0e1bf(eslint@9.21.0)(typescript@5.7.3)
       async-lock: 1.4.1
@@ -2909,6 +2912,11 @@ snapshots:
       lodash.clonedeep: 4.5.0
       lru-cache: 10.4.3
       promise-coalesce: 1.1.2
+
+  cacheable@1.8.9:
+    dependencies:
+      hookified: 1.7.1
+      keyv: 5.3.1
 
   cacheable@1.8.9:
     dependencies:
