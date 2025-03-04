@@ -62,7 +62,7 @@
     "@whiskeysockets/baileys": "^6.7.15",
     "bee-queue": "^1.7.1",
     "body-parser": "1.20.3",
-    "cacheable": "^1.8.8",
+    "cacheable": "^1.8.9",
     "ejs": "3.1.10",
     "express": "4.21.2",
     "keyv": "^5.3.1",
