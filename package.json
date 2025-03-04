@@ -59,7 +59,7 @@
   "dependencies": {
     "@hapi/boom": "^10.0.1",
     "@keyv/redis": "^4.3.1",
-    "@whiskeysockets/baileys": "^6.7.15",
+    "@whiskeysockets/baileys": "^6.7.16",
     "bee-queue": "^1.7.1",
     "body-parser": "1.20.3",
     "cacheable": "^1.8.8",
